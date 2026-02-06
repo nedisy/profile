@@ -1,4 +1,4 @@
-baseURL: "https://profile.nedi.online"
+baseURL: "https://nedisy.github.io/profile"
 languageCode: "en-us"
 title: "My Profile"
 theme: hugo-profile
