@@ -1,0 +1,386 @@
+baseURL: "https://profile.nedi.online"
+languageCode: "en-us"
+title: "My Profile"
+theme: hugo-profile
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+  #googleAnalytics:
+    #id: G-MEASUREMENT_ID
+  #disqus:
+    #shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: gallery
+      name: Gallery
+      title: Blog posts
+      url: /gallery
+      weight: 1
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: "https://www.nedi.online"
+      weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "My Profile"
+  description: My web resume
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/favicon.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "My Profile" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Nedi."
+    subtitle: "I build, things"
+    content: "Primarily a civil or a structural engineer focusing on structural design and checking, but can also do coding stuffs like webdev and data processing."
+    image: nediinoffice.jpg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "https://nc.nedi.lol/index.php/s/q6QLZXoKSEYDSRg"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/nedisy
+        - icon: fab fa-github
+          url: https://github.com/nedisy
+      customIcons:
+        - icon: favicon.png
+          url: "https://www.nedi.online"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "nedi.jpg"
+    content: |-
+      I am a civil engineer with a passion for structural designing. I have a background in engineering, science, and mathematics, and I have a strong interest in the intersection of structural efficiency and practicality. I am actively seeking for employment and open to any work related to civil and structural engineering, green energy, sustainable mining, and software development bootcamps.
+
+      While I wait for employment, I currently work as an AI trainer and also actively upgrading my skils.
+    skills:
+      enable: true
+      title: "Here are a few skills I've trained myself in:"
+      items:
+        - "Structural Analysis"
+        - "Structural Design"
+        - "ETABS"
+        - "SAP2000"
+        - "Python"
+        - "Typescript"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - company: "B-Foam"
+        companyUrl: "http://www.b-panel.com/"
+        jobs:
+          - name: "Engineering Staff"
+            date: "Sep 2024 - May 2025"
+            content: |
+              - Developed Python scripts to solve structural and hydrodynamic analysis of marine pontoon.
+              - Suryveyed ans supervised the specialized construction method using EPS as insulative wall core, geotechnical filings, and architectural façade.
+              - Drew "for construction" and "as built" documents of projects utilizing the specialized solutions.
+
+      - company: "Universitas Indonesia"
+        companyUrl: "https://ui.ac.id"
+        jobs: 
+        - name: "Structural Analysis Assistant Lecturer"
+          date: "Jan 2024 - Jun 2024"
+          content: |
+            - Instructed and mentored students in learning structural analysis methods like consistent deformation, sope deflection, and matrix analysis.
+            - Co-developed teaching modules and educational materials to support effective learning outcomes.
+
+        - name: "Solid Mechanics Assistant Lecturer"
+          date: "Aug 2023 - Dec 2024"
+          content: |
+            - Instructed students in applying solid mechanics concepts like elasticity to solve simplified structural problems.
+            - Assisted in the development of teaching modules and educational materials to support faculty's teaching goals.
+
+      - company: "TATA"
+        companyUrl: "https://www.tatamulia.co.id"
+        jobs:
+        - name: "Civil Engineering Intern"
+          date: "Jun 2024 - Aug 2024"
+          content: |
+            - Supervised construction stages for floor number 1 to 3 of the Doyona JK21 Data Center project, gaining critical exposure to high-tech infrastructure requirements.
+            - Executed Quality Control (QC) protocols, calculated reinforcement requirements, and conducted geometry surveys to ensure structural precision.
+            - Observed the applicaction of theoretical knowledges to solve real-time field problems, bridging the gap between in class knowledge and on-site experience.
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "Bachelor of Engineering in Civil Engineering (S.T.)"
+        school:
+          name: "Universitas Indonesia"
+          url: "https://ui.ac.id"
+        date: "2020 - 2024"
+        GPA: "3.48 out of 4.0"
+        content: |-
+          Activities and Societies
+          - Head of Structure and Material Division in Cartala
+            - Led the division to increase student participation and competency in structural engineering and material science.
+            - Organized technical trainin gfor industry-standard software including AutoCAD and SAP2000 to improve students' design capabilities.
+            - Facilitated "Hands-On" activities such as the Cartala Workshop to prepare students for national and international competitions.
+          - Created Computational Design Optimizer
+            - Used as a solver for the Nanyang Technological University Bridge Design Competition.
+            - Written in Python, used a combination of gradient descend and stochastic solver to find the optimum design.
+            - With no topological optimizer, was able to takes in the 18th position in the competition where the top 14 teams are selected.
+          - Undergraduate Final Project: Using DIC to find the Elastic Modulus of Roller Compacted Concrete
+            - Used DICe and command prompt scripting to automate image processing.
+            - Used Python to automate charts creation used in the research.
+            - Compared industry standard strain gauge with strains obtained by the digital image correlation (DIC)
+
+
+      - title: "High School"
+        school:
+          name: "Pribadi Bilingual Boarding School Bandung."
+          url: "https://pribadibandung.sch.id"
+        GPA: "91 out of 100"
+        content: |-
+          Activities:
+          - International Biology Olympiad (IBO)
+          - National Science Olympiad (OSN)
+          - Medspin UNAIR
+          - National Medial and General Biology Competition (NMGBC)
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: 18th rank on the 2024 NTU BDC
+        content: I solved an initial layout of a bridge to get its optimal geometric shape, though the inital layou turned out to not be global optimum.
+        url: "https://github.com/nedisy/NTUBDC2025-structural-optimizer"
+        image: optimizedbridge.jpg
+      - title: Silver Medalist at IBO 2019
+        content: As a high school student, went into the international competition and got a silver medal.
+        url: "https://www.youtube.com/watch?v=Uwc9u7K7ZNQ"
+        image: silvermedalist.jpg
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: TIDHA
+        content: Time Domain Hydrodynamic Analysis. It was created as the Python alternative to Fortran based hydrodynamic integrators. It uses the hydrodynamic solution from NEMOH integrated in the script to get the Impulse Resonse.
+        image: pontoon.jpg
+        featured:
+          name: Documentation
+          link: https://nedisy.github.io/TIDHA
+        badges:
+          - "Python"
+          - "Hydrodynamic"
+          - "RAO"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:nedi.sawego.yogya@gmail.com?subject=TIDHA&body=Hello,%20I%20want%20to%20ask%20about%20TIDHA
+          - icon: fab fa-github
+            url: https://github.com/nedisy/TIDHA
+          - icon: fab fa-x-twitter
+            url: https://twitter.com/intent/tweet?text=@NediSawego+How+does+it+work?:&url=https%3A%2F%2Fgithub.com%2Fnedisy%2FTIDHA
+
+      - title: Slimefun Calculator
+        content: A web app to recursively calculate how much material a minecraft slimefun item need and what is the optimal steps to craft it.
+        image: https://repository-images.githubusercontent.com/20125051/08b41f80-33de-11ea-8b28-747eaa27f0ec
+        featured:
+          name: Demo
+          link: https://nedisy.github.io/slimefun-calculator
+        badges:
+          - "Typescript"
+          - "React"
+          - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/nedisy/slimefun-calculator
+
+      - title: Metric Camera Workbench
+        content: A windows app that can analyze a photograph and determine the 3D coordinates of various object in it.
+        image: https://github.com/nedisy/Metric-Camera-Workbench/blob/master/icon.png?raw=true
+        featured:
+          name: Release
+          link: https://github.com/nedisy/Metric-Camera-Workbench/releases/tag/v0.1.0
+        badges:
+          - "Qt"
+          - "Python"
+          - "OpenCV"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/nedisy/Metric-Camera-Workbench
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    btnName: Mail me
+    btnLink: mailto:nedi.sawego.yogya@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/nedisy
+      linkedin: https://www.linkedin.com/in/nedisy
+      twitter: https://twitter.com/nedisawego
+      instagram: https://instagram.com/nedisawego
+      facebook: https://facebook.com/nedisawego
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
