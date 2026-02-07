@@ -148,7 +148,7 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "https://nc.nedi.lol/index.php/s/q6QLZXoKSEYDSRg"
+      url: resume.pdf
       download: true
       newPage: false
     socialLinks:
@@ -235,18 +235,18 @@ params:
         GPA: "3.48 out of 4.0"
         content: |-
           Activities and Societies
-          - Head of Structure and Material Division in Cartala
+          - Head of Structure and Material Division in Cartala:
             - Led the division to increase student participation and competency in structural engineering and material science.
             - Organized technical trainin gfor industry-standard software including AutoCAD and SAP2000 to improve students' design capabilities.
             - Facilitated "Hands-On" activities such as the Cartala Workshop to prepare students for national and international competitions.
-          - Created Computational Design Optimizer
+          - Created Computational Design Optimizer:
             - Used as a solver for the Nanyang Technological University Bridge Design Competition.
             - Written in Python, used a combination of gradient descend and stochastic solver to find the optimum design.
             - With no topological optimizer, was able to takes in the 18th position in the competition where the top 14 teams are selected.
-          - Undergraduate Final Project: Using DIC to find the Elastic Modulus of Roller Compacted Concrete
+          - Undergraduate Final Project: Using DIC to find the Elastic Modulus of Roller Compacted Concrete:
             - Used DICe and command prompt scripting to automate image processing.
             - Used Python to automate charts creation used in the research.
-            - Compared industry standard strain gauge with strains obtained by the digital image correlation (DIC)
+            - Compared industry standard strain gauge with strains obtained by the digital image correlation (DIC).
 
 
       - title: "High School"

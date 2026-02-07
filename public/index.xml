@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Profile</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:1313/profile/</link>
     <description>Recent content on My Profile</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Feb 2026 16:52:00 +0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/profile/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image Gallery</title>
-      <link>http://localhost:1313/gallery/</link>
+      <link>http://localhost:1313/profile/gallery/</link>
       <pubDate>Thu, 05 Feb 2026 16:52:00 +0700</pubDate>
-      <guid>http://localhost:1313/gallery/</guid>
+      <guid>http://localhost:1313/profile/gallery/</guid>
       <description></description>
     </item>
   </channel>
